@@ -33,8 +33,8 @@
 
 typedef struct s_envp
 {
-	char			*var_name;
-	char			*var_value;
+	char			*name;
+	char			*value;
 	struct s_envp	*next;
 	struct s_envp	*prev;
 }					t_envp;
@@ -80,22 +80,22 @@ typedef enum e_sig_state
 }					t_sig_state;
 
 /* Builtins */
-void				ft_cd(char **args, t_envp *env);
-void				ft_echo(char **args);
-void				ft_env(t_envp *env, char **args);
-void				ft_export(t_envp **env, char **args);
-void				ft_pwd(void);
-void				ft_unset(t_envp **env, char **args);
+void				cd(char **args, t_envp *env);
+void				echo(char **args);
+void				env(t_envp *env, char **args);
+void				export(t_envp **env, char **args);
+void				pwd(void);
+void				unset(t_envp **env, char **args);
 void				ft_exit(char **args, t_execute *exec);
 
 /* Function for envlst linked list */
 t_envp				*get_env_variables(char **envp);
-t_envp				*ft_envlst_new(char *str);
-void				ft_envlstadd_back(t_envp **env, t_envp *new_env);
-void				ft_envlst_clear(t_envp **env);
-void				ft_envlst_clearone(t_envp **root, t_envp *env);
-t_envp				*ft_envlst_search(t_envp *env, char *searched);
-int					ft_envlst_size(t_envp *env);
+t_envp				*envlst_new(char *str);
+void				envlstadd_back(t_envp **env, t_envp *new_env);
+void				envlst_clear(t_envp **env);
+void				envlst_clearone(t_envp **root, t_envp *env);
+t_envp				*envlst_search(t_envp *env, char *searched);
+int					envlst_size(t_envp *env);
 
 /* Parsing */
 char				*parse_operator(char *cmd);
