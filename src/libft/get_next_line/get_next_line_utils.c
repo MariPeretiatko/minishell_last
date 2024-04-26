@@ -6,7 +6,7 @@
 /*   By: mperetia <mperetia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 14:52:33 by mperetia          #+#    #+#             */
-/*   Updated: 2024/04/22 21:50:18 by mperetia         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:05:03 by mperetia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ char	*ft_strjoin_gnl(char *static_buff, char *buff)
 	free(static_buff);
 	return (str);
 }
-

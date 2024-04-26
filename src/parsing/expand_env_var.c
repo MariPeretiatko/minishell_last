@@ -6,7 +6,7 @@
 /*   By: mperetia <mperetia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 22:30:37 by mperetia          #+#    #+#             */
-/*   Updated: 2024/04/22 22:30:37 by mperetia         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:11:31 by mperetia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ static char	*apply_expansion(char *tok, t_envp *env)
 			else if (tok[i] == 0)
 				break ;
 		}
-		else if (tok[i] == '$' && state != 1 && (tok[i + 1] == ' ' || tok[i
-				+ 1] == '\'' || tok[i + 1] == '"' || tok[i + 1] == '$' || !tok[i
-				+ 1]))
+		else if (tok[i] == '$' && state != 1 && (tok[i + 1] == ' '
+				|| tok[i + 1] == '\'' || tok[i + 1] == '"'
+				|| tok[i + 1] == '$' || !tok[i + 1]))
 			;
 		else
 			tok = apply_expansion_bis(tok, &i, state, env);

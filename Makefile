@@ -13,7 +13,6 @@ red_minus := $(BLUE)[$(RED)-$(BLUE)]$(NORMAL)
 
 # --- Project sources --- #
 SRC := main.c\
-	   prompt.c\
 	   utils/env_list_functions.c\
 	   utils/env_list_functions_bis.c\
 	   utils/is_utils.c\

@@ -6,7 +6,7 @@
 /*   By: mperetia <mperetia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 21:59:41 by mperetia          #+#    #+#             */
-/*   Updated: 2024/04/22 23:27:33 by mperetia         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:06:09 by mperetia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_isext(char *file, char *ext)
 	if (l_ext >= l_file)
 		return (0);
 	return (ft_strncmp(file + l_file - l_ext, ext, l_ext) == 0 && file[l_file
-		- l_ext - 1] != '/');
+			- l_ext - 1] != '/');
 }
